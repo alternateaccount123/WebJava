@@ -1,7 +1,11 @@
 
-//evrything in springboot tutorial 
-what you need 
 
-create db and user from mysql cmd line 
-for java you need a propertie file, a repository and a entity 
-for testing you can use postman 
+1)create db and user 
+2)add properties 
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://${MYSQL_HOST:localhost}:3306/db_example
+spring.datasource.username=springuser
+spring.datasource.password=ThePassword
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#spring.jpa.show-sql: true
+3)code should persist now 
