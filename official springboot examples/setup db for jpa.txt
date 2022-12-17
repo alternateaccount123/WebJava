@@ -1,0 +1,7 @@
+
+//evrything in springboot tutorial 
+what you need 
+
+create db and user from mysql cmd line 
+for java you need a propertie file, a repository and a entity 
+for testing you can use postman 

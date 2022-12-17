@@ -4,4 +4,6 @@
 MyController.java
 Car.java
 
-output: printing an object
+
+input: obj
+output:  {"brand":"toyota","year":2000}  //printed an object

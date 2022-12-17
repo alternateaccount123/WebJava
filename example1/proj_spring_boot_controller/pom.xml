@@ -11,7 +11,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>SpringBootExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>SpringBootExample</name>
+	<name>proj_spring_boot_controller</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
@@ -51,15 +51,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-rest -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-data-rest</artifactId>
-    <version>3.0.0</version>
-</dependency>
-
-
-
 	</dependencies>
 
 	<build>
