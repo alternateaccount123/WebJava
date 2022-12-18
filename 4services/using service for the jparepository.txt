@@ -1,0 +1,5 @@
+
+
+injecting a service (which uses repository), is better than injecting the repository directly 
+this way you can add business logic to the methods provided by the repository. 
+i.e. you can narrow the filter to certain number of characters , or you could only allow deletion for admins , etc.  

@@ -20,7 +20,7 @@ public class Person {
 		
 	}
 
-	public Person(String firstName, String lastName) {
+	public Person(String firstName, String lastName) {   //id must be skipped in constructor only, but not in getters, setter and toString
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -40,6 +40,12 @@ public class Person {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	@Override
