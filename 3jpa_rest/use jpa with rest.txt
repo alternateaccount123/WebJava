@@ -1,0 +1,5 @@
+
+
+
+just make sure you setup the db , then everything is just adding the repository 
+and calling its methods from the controller.  (PersonRepository is field injected into the controller using @autowire)

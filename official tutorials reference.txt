@@ -1,0 +1,10 @@
+//I used this for reference. the code in the github repo is different 
+
+
+https://spring.io/guides/gs/accessing-data-mysql/
+
+https://spring.io/guides/gs/accessing-data-jpa/
+
+https://spring.io/guides/gs/accessing-data-rest/
+
+

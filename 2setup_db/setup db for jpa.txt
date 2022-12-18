@@ -1,4 +1,4 @@
-
+https://spring.io/guides/gs/accessing-data-mysql/
 
 1)create db and user 
 2)add properties 
