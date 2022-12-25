@@ -1,0 +1,10 @@
+(data transfer object)
+DTOs 
+transfer data between a presentation layer (e.g., a web application) and a service layer (e.g., a business service).
+why dto 
+better , performance security and maintainability . 
+
+
+//added 
+method convertToDto 
+personDto.java 
