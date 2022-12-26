@@ -1,4 +1,4 @@
-package com.example.accessingdatarest;
+package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 	
 	
-
+	//<1> new field and constructor injection 
 	private PersonService personService;
-	public MyController(PersonService personService) {  	//constructor injection 
+	public MyController(PersonService personService) {  	
 		super();
 		this.personService = personService;
 	}
@@ -21,15 +21,17 @@ public class MyController {
 	//private PersonRepository personRepository;  
 
 	
+	//input personService.findById(1L)
+	//output {"id":1,"firstName":"jon","lastName":"doe"}
 	@GetMapping(path = "/1")
 	public Person getAllUsers() {
 		
 		//save into database 
 		Person n = new Person("messi", "ident");		
-		personService.save(n);
+		personService.save(n);  //<3>
 		
 		//find person by id and return it 
-		Person person = personService.findById(1L).get();	
+		Person person = personService.findById(1L).get();   //<3>	
 		return person;
 	}
 	

@@ -1,4 +1,4 @@
-package com.example.accessingdatarest;
+package com.example.demo;
 
 import java.util.Optional;
 import org.springframework.stereotype.Service;

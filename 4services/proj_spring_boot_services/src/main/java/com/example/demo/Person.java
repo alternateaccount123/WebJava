@@ -1,5 +1,5 @@
 
-package com.example.accessingdatarest;
+package com.example.demo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

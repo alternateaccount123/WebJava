@@ -1,4 +1,4 @@
-package com.example.accessingdatarest;
+package com.example.demo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 
 //dto must have no anottations and less ivs , keeps the id with no anottation 
 //no need for tosetring 
-public class PersonDto {
+public class PersonDto {  //<1>
 
 
 	private long id;

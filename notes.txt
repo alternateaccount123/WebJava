@@ -1,0 +1,36 @@
+
+
+==================
+notes
+==================
+maven
+Artifactid: <project-id>    //project id , is most of the time the same as "the name of your project"
+name:<proj-name>	    //you cannot choose this . initializr by default sets this to the same name as "Artifactid"
+groupId: <com.example>
+package: <com.example.demo> 
+dependencies:  Spring web, thymeleaf, spring devtools, h2 Database, JPA, MySql Driver, rest repositories
+
+
+=======================
+officials tutorials reference
+=======================
+
+
+//I used this for reference. the code in the github repo is different 
+
+//<just skim through this>
+https://spring.io/guides/gs/accessing-data-jpa/
+
+//<2>
+https://spring.io/guides/gs/accessing-data-mysql/
+
+//<3>
+https://spring.io/guides/gs/accessing-data-rest/
+
+
+=====
+errors
+=====
+
+copying and a project and changing the name in the pom brought me a problem 
+so I just remade everything using 1 initializr for each 4,5, and 6 (clean setup)

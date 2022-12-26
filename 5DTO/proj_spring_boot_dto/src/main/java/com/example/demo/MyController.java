@@ -1,11 +1,10 @@
-package com.example.accessingdatarest;
+package com.example.demo;
 
 
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 
 
 
@@ -39,7 +38,7 @@ public class MyController {
 	}
 	
 	//dto
-    private PersonDto convertToDto(Person entity) {
+    private PersonDto convertToDto(Person entity) {  //<2>
     	//you want the to transfer only the data you need, a smaller amount of data.
     	//you want to limit the amount of data that is exposed in the transfer.
     	//below is just a copy of the entity, a subset of the data from an entity
