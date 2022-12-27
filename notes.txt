@@ -18,13 +18,13 @@ officials tutorials reference
 
 //I used this for reference. the code in the github repo is different 
 
-//<just skim through this>
+//<just skimmed through this>
 https://spring.io/guides/gs/accessing-data-jpa/
 
-//<2>
+//based "setup_db" folder on this
 https://spring.io/guides/gs/accessing-data-mysql/
 
-//<3>
+//based "jpa_rest" folder on this 
 https://spring.io/guides/gs/accessing-data-rest/
 
 
@@ -33,4 +33,4 @@ errors
 =====
 
 copying and a project and changing the name in the pom brought me a problem 
-so I just remade everything using 1 initializr for each 4,5, and 6 (clean setup)
+so I just remade everything using 1 initializr for each 5,6, and 7 (clean setup)

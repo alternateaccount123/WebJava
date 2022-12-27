@@ -1,0 +1,9 @@
+if the you dont have the dependency yet 
+make sure you DONOT go to the maven repository and choose the corresponding xml snippet .IT WONT WORK 
+
+you must use the initialzr. is the only safe way . 
+
+attribute of the Thymeleaf Standard Dialect 
+th:each 
+th:text
+etc...

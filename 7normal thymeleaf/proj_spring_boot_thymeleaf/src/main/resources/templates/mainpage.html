@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <title>title</title>
+</head>
+
+<body>
+	
+  <!-- printing thy variable that retrieved obj from java code  -->
+  <h1>test for showing a thymeleaf variable expression</h1>
+  <p th:text="${myvariable}">this text will be replace by the variable</p>
+  
+  <!-- printing thy variable fields into table -->
+  	<table class="table col-md-6 ml-3">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>firstName</th>
+				<th>lastName</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="person : ${myvariable}">      <!-- note that th:each=person is binding the elements of the list to person thy variable -->
+				<td th:text="${person.id}"></td>
+				<td th:text="${person.firstName}"></td>
+				<td th:text="${person.lastName}"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+
+</html>
