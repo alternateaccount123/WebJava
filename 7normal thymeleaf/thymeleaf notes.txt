@@ -1,9 +1,38 @@
-if the you dont have the dependency yet 
-make sure you DONOT go to the maven repository and choose the corresponding xml snippet .IT WONT WORK 
 
-you must use the initialzr. is the only safe way . 
+if the you dont have the dependency thymeleaf yet 
+DONNOT go to the maven repository and choose the corresponding xml snippet .IT WONT WORK 
+you must use the initialzr. is the only safe way. 
 
-attribute of the Thymeleaf Standard Dialect 
-th:each 
-th:text
-etc...
+-------------------------------------------------------------------
+
+==========================
+thymeleaf
+==========================
+thymeleaf templates (the html)
+are located at src/main/resources/templates/
+
+//in java code 
+model.addAttribute(...); is how you send thing from java to the html as a thymeleaf variable like ${variable}
+the parameter of your method must have a Model object 
+
+-------------------------------------------------------------------
+
+//more notes about this in src/main/resources/notes.txt
+changed setup from 
+
+    @GetMapping
+    public String loadPage(Model model) {   	
+	//add something to html ...
+        return "mainpage";  //<3>
+    }
+
+to 
+
+    @ModelAttribute  
+    public void loadPage(Model model) {
+    	//add something to html ...  
+    }  
+    @GetMapping
+    public String handleGetRequest(Model model) {
+        return "mainpage";
+    }

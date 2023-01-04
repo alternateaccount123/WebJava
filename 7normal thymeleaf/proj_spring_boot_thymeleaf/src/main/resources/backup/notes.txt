@@ -1,0 +1,32 @@
+
+
+=====================
+//first method to handle get request  (this is better probably)
+=====================
+
+	//will always be called before any request handler method that returns the "mainpage" view. including redirects
+    @ModelAttribute  
+    public void loadPage(Model model) {
+        Person person = personService.findById(1L).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+        model.addAttribute("myvariable", person);     //put 'person' value from java code into thymeleaf variable 'myvariable'
+    }
+	//handle get request to http://localhost:8080/example 
+    @GetMapping
+    public String handleGetRequest(Model model) {
+        return "mainpage";
+    }
+	
+=====================
+//first method to handle get request 
+=====================
+	
+	
+	//this will NOT be called always and its model data will be lost as soon as another method gets called. 
+	//handle get request to http://localhost:8080/example 
+    @GetMapping  
+    public String loadPage(Model model) {    
+		Person person = personService.findById(1L).orElseThrow( () -> new ResponseStatusException(HttpStatus.NOT_FOUND));   	
+        model.addAttribute("myvariable", person);    //put 'person' value from java code into thymeleaf variable 'myvariable'
+        return "mainpage";  //render mainpage.html
+    }
+    

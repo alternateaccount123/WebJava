@@ -1,0 +1,12 @@
+
+server input: //an obj 
+server output: //app started...
+
+client input: http://localhost:8080/example/1
+
+client output: 
+{
+    "id": 1,
+    "firstName": "jon",
+    "lastName": "doe"
+}

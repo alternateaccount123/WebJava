@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<title>title</title>
+</head>
+
+<body>
+
+	<!-- printing thy variable that retrieved obj from java code  -->
+	<h1>test for showing a thymeleaf variable expression</h1>
+	<p th:text="${myvariable}">this text will be replace by the variable</p>
+
+    <!-- <1> input for an object-->
+    <!-- for this to work you need to send an empty obj person at the beginning of the program so that th:object can use it -->
+    <form th:action="@{/example}" th:object="${person}" method="post">
+		<label for="firstName">firstName</label> 
+		<input type="text" th:field="*{firstName}">
+		<input type="submit" value="Save Project">
+	</form>
+	 
+	
+	<!-- print string input -->
+	<p th:text="${myobjinputvar}"></p>
+
+
+</body>
+
+</html>
