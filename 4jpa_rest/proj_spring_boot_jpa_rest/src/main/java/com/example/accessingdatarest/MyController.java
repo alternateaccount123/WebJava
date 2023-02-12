@@ -20,7 +20,7 @@ public class MyController {
 
 	
 	@GetMapping(path = "/1")
-	public Person getAllUsers() {
+	public Person myMethod() {
 		
 		//save into database 
 		Person n = new Person("jon", "asdf");		
