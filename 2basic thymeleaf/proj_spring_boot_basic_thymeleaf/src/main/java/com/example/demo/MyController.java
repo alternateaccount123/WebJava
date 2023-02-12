@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyController {
 	
 	
-	@Autowired // get the bean called userRepository , you could also use constructor injection , they are equivalent
-	private PersonRepository personRepository;  
+    @Autowired // get the bean called userRepository , you could also use constructor injection , they are equivalent
+    private PersonRepository personRepository;  
 
 	
     @GetMapping
