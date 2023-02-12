@@ -6,7 +6,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity
+//entity class purpose is to store stuff into a database, each entity class represents a table in a database.
+@Entity  //An instance of this class will get its fields mapped to a database whenever you use repository methods 
 public class Person {
 
 	@Id
