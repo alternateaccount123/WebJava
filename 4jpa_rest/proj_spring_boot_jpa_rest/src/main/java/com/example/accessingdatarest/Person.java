@@ -11,7 +11,7 @@ public class Person {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long id;  //skip it only in the constructor, then used treat it as a normal field 
 
 	private String firstName;
 	private String lastName;
