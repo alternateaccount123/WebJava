@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController // This means that this class is a Controller
+@RestController //this class is a RestController, which means all its handler methods will return a response body by default (displayed in json format)
 @RequestMapping(path = "/example") //URL's start with /example (after Application path)
 public class MyController {
 	
