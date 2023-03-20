@@ -15,6 +15,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //once repository is injected (is basically now an instance variable of the controller now) you use its methods 
 //note that you must setup your database connection for the repository to use.Located at src/main/resources/application.properties
 
+//<4>use a service instead of using the repository, this way you can handle  business logic in the service 
+//(basically this just made as a way to organize things better)
+
 @SpringBootApplication
 public class App {
 

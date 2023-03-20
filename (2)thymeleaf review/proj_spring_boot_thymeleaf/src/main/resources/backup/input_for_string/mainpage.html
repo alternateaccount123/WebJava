@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
+	<!--TITLE: INPUT_FOR_STRING -->
 	<title>title</title>
 </head>
 
@@ -12,16 +12,29 @@
 	<h1>test for showing a thymeleaf variable expression</h1>
 	<p th:text="${myvariable}">this text will be replace by the variable</p>
 
-	<!-- <1> input for a string-->
+
+	<!-- <1> input for a string -->
 	<form th:action="@{/example}" method="post">
 		<label for="stringinput">stringinput</label> 
 		<input type="text"	name="stringinput"> 
 		<input type="submit" value="Save Project">
 	</form>
 	
-	<!-- print string input -->
+    <!-- this will NOT work model.addAttribute("myThyString",new String()); 
+	<form th:action="@{/example}" th:object="${myThyString}" method="post">
+		<label for="stringinput">stringinput</label> 
+		<input type="text" th:field="*{stringinput}" > 
+		<input type="submit" value="Save Project">
+	</form>
+ -->
+	
+	
+	<p>input will be show in the console</p>
+	<!-- this  mystringvar thymeleaf variable that is the input  will not be available . 
+	check concept: "redirect after post pattern" inside my folder ...\(0)spring-boot\CONCEPTS-->	
+	<!-- print string input 
 	<p th:text="${mystringvar}"></p>
-
+	-->
 
 </body>
 

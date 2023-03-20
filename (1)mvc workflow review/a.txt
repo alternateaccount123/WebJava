@@ -1,0 +1,33 @@
+
+
+//mainpage and application.properties are located inside src/main/resources 
+
+
+<1>
+App.java		//starts application 
+MyController.java	//maps the urls to method handlers 
+
+
+<2>
+App.java
+MyController.java
+mainpage.html        //and make sure your project was generated with thymeleaf dependency
+
+
+<3> 
+App.java
+MyController.java
+mainpage.html  
+Person.java 		//entity class 
+PeronRepository.java    //interface , is the interface the connects java with db
+application.properties  //configuration file for db 
+
+
+<4> 
+App.java
+MyController.java
+mainpage.html  
+Person.java 		
+PeronRepository.java    
+application.properties  
+PersonService.java       //whne you want to use repository methods this will be used now instead of PeronRepository 

@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
+	<!-- TITLE: PRINT_OBJ_OR_LIST_OBJ -->
 	<title>title</title>
 </head>
 
@@ -11,9 +11,26 @@
 	<!-- printing thy variable that retrieved obj from java code  -->
 	<h1>test for showing a thymeleaf variable expression</h1>
 	<p th:text="${myvariable}">this text will be replace by the variable</p>
+	
+	
+	
+	<!-- <1> printing thy variable fields into unordered list 	-->
+  	<ul>
+        <li th:each="person : ${myvariable}">
+            <span th:text="${person.id}"></span> 
+            <span th:text="${person.firstName}"></span> 
+            <span th:text="${person.lastName}"></span>
+        </li>
+    </ul>
 
+	
+	
+	
+	
+	
+<!-- myvariable is a List containing Person objs, th:each=person is binding the list els. -->
     <!-- <1> printing thy variable fields into table -->
-  	<table class="table col-md-6 ml-3">
+  	<table class="mytable">
 		<thead>
 			<tr>
 				<th>Id</th>
@@ -22,7 +39,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr th:each="person : ${myvariable}">      <!-- myvariable is a list of person els, th:each=person is binding the list els. -->
+			<tr th:each="person : ${myvariable}">      
 				<td th:text="${person.id}"></td>
 				<td th:text="${person.firstName}"></td>
 				<td th:text="${person.lastName}"></td>

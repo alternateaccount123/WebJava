@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-//string input 
+//INPUT_FOR_STRING
 //<1> add input from form in html that sends post request
 //<2> add java method to handle post request 
 @Controller // when working with thymeleaf use controller 
@@ -53,8 +53,8 @@ public class MyController {
     	System.out.println(stringinput);
     	model.addAttribute("mystringvar", stringinput);  //put 'stringinput' value from java code into thymeleaf variable 'mystringvar'
 
-    	return "mainpage";  //updates mainpage with data from this method model
-    	//return "redirect:/example";   //updates /example but it will redirect to other method losing all model data gotten here i.e. stringinput 
+        return "redirect:/example";   //you must use return redirect
+       	//return "mainpage";          //you must not use return myfile.html after a @post handler method . instead you use redirect    
       
     }
     

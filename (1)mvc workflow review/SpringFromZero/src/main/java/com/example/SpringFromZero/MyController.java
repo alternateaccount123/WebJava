@@ -15,30 +15,46 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/example")
 public class MyController {
 	
-	
-	//<3>
-    @Autowired // bean injection , you could also use constructor injection , they are equivalent
-    private PersonRepository personRepository;   
-    //<3>
-    //run on browser -> localhost:8080/example
+
+	//<4>
+	//run on browser -> localhost:8080/example
+	@Autowired 
+	private PersonService personService;  // bean injection , you could also use constructor injection , they are equivalent. adds new instance variables to the controller
 	@GetMapping
-	public String getAllUsers(Model model) {	
+	public String myMethod(Model model) {  //same thing as Persons repository . but instead of using the PersonRepository object you use the PersonService
+		//save into database 
+		Person n = new Person("servicetest", "0987654321");		
+		personService.save(n);  		
+		//find person by id and return it //.get(0) because it retrieves a list of results like a query
+		Person person = personService.findByFirstName("servicetest").get(0);  //.get (0) means first index from list
+		model.addAttribute("myvariable", person); 
+		return "mainpage";	
+	}
+	
+	
+	
+	/*
+	//<3>
+	//run on browser -> localhost:8080/example
+    @Autowired // bean injection , you could also use constructor injection , they are equivalent. adds new instance variables to the controller
+    private PersonRepository personRepository;   
+	@GetMapping
+	public String myMethod(Model model) {	
 		//save into database 
 		Person n = new Person("nothing", "5530273");		
 		personRepository.save(n);  		
 		//find person by id and return it //.get(0) because it retrieves a list of results like a query
 		Person person = personRepository.findByFirstName("nothing").get(0);  //.get (0) means first index from list
 		model.addAttribute("myvariable", person); 
-		return "mainpage";
-		
+		return "mainpage";		
 	}
-    
+    */
     
     /*
     //<2>
     //run on browser -> localhost:8080/example
     @GetMapping
-    public String getProjects(Model model) {   	   		
+    public String myMethod(Model model) {   	   		
     	//sending an String object to html 
         model.addAttribute("myvariable", "Hello world");    // set attribute for model, first arg is thy var
         return "mainpage";       //by using @Controller the return statement. makes sure that the "mainpage.html" file can access the model attributes

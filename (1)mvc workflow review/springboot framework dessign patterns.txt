@@ -1,0 +1,16 @@
+
+=========================================
+design patterns in framework springboot
+=========================================
+
+Dependency Injection:  i.e. @autowire
+
+Model-View-Controller: use of controller class
+
+...
+
+============================
+programming design pattern 
+============================
+
+repository pattern : 

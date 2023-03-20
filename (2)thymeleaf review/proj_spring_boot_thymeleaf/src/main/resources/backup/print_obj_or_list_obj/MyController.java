@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-
+//PRINT_OBJ_OR_LIST_OBJ
 //<1> add table in html that prints elements from a list
 //<2> send java list object to Model obj
 @Controller // when working with thymeleaf use controller 

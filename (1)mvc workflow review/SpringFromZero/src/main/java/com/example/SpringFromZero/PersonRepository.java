@@ -13,8 +13,9 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;  //
 public interface PersonRepository extends PagingAndSortingRepository<Person, Long>, CrudRepository<Person,Long> {
 
   List<Person> findByLastName(@Param("name") String name);// will allow you to sort based in name field of Person
-  //find by whatever you can make then up 
   
+  //find by whatever you can make then up the syntax is List<MyObject> findBy'something'(@Param("foo") String foo)
+  //the foo can be any identifier , it is never used in the code
   List<Person> findByFirstName(@Param("name") String name);
 
 
