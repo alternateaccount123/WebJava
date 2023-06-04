@@ -1,15 +1,22 @@
 
 
 ==================
-notes
+note
 ==================
 maven
 Artifactid: <project-id>    //project id , is most of the time the same as "the name of your project"
 name:<proj-name>	    //you cannot choose this . initializr by default sets this to the same name as "Artifactid"
 groupId: <com.example>
 package: <com.example.demo> 
-dependencies:  Spring web, thymeleaf, spring devtools, h2 Database, JPA, MySql Driver, rest repositories
-
+dependencies:  
+	Spring web,
+	thymeleaf,
+	spring devtools,
+	h2 Database,
+	JPA,
+	MySql Driver,
+	rest repositories,
+	spring security 
 
 =======================
 officials tutorials reference

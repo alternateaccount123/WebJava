@@ -1,0 +1,134 @@
+
+
+
+can you change the rest controller to be a controller . and can you add 
+a getmapping method handler for the html of index.html if necessary (i dont 
+know if it will need it)
+
+
+//index.html
+<!DOCTYPE html>
+<html>
+<head>
+<!--<link rel="stylesheet" type="text/css" href="style.css">-->
+<title>Vanilla JavaScript Example</title>
+</head>
+<body>
+
+
+	<div id="comments-container">
+		<form id="add-comment-form">
+			<textarea id="comment-text"></textarea>
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+
+
+	<script src="main.js"></script>
+</body>
+</html>
+
+
+
+//MyController.java
+package com.example.demo; 
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+//consider using a controller instead so that you can choose which html to use with each endpoint
+@RestController
+@RequestMapping("/")
+public class MyController {
+	
+	
+    private final CommentService commentService;
+
+    @Autowired
+    public MyController(CommentService commentService) {
+        this.commentService = commentService;
+    }
+
+    //current problem this does not exec. do prompt 
+    @PostMapping("/comments")
+    public ResponseEntity<Comment> addComment(@RequestBody Comment comment) {
+    	System.out.println(",,,,,,,,,,,,,,,post handler method executed,,,,,,,,,,,,,,,,,,,,,");
+        comment.setMessage(comment.getMessage());
+        Comment savedComment = commentService.addComment(comment);
+        return ResponseEntity.status(HttpStatus.CREATED).body(savedComment);
+    }
+    
+  
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+//main.js
+
+const addCommentForm = document.getElementById("add-comment-form");
+addCommentForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const commentText = document.getElementById("comment-text").value;
+  if (!commentText) {
+    return;
+  }
+  console.log(commentText);
+  document.getElementById("comment-text").value = ""; // Clear the input field
+  addComment(commentText);
+  
+});
+
+
+function addComment(comment) {
+  fetch("/comments", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      message: comment
+    })
+  })
+    .then(response => {
+      if (response.ok) {
+		//code can be here but will be slow because conn time    
+        return response.json();
+      }
+      throw new Error("Error adding comment.");
+    })
+    .then(comment => {
+		//code here to do something with the data 
+		console.log(comment);
+    })
+    .catch(error => {
+      console.error("Error adding comment:", error);
+    });
+}
+
+
+
+
+
+
+
+
+
+
+

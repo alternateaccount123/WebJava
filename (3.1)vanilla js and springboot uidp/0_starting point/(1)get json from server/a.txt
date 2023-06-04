@@ -1,0 +1,6 @@
+
+
+just use .json instead of .text() and use dot notation to access fields 
+
+
+remember that java objs get transformed into json. so basically the server sends a java obj. (automatically js will get it as json)

@@ -1,0 +1,26 @@
+
+const addCommentForm = document.getElementById("add-comment-form");
+
+addCommentForm.addEventListener("submit", function(event) {
+
+  event.preventDefault();
+  const commentText = document.getElementById("comment-text").value;
+  if (!commentText) {
+    return;
+  }
+  addComment(commentText);
+
+});
+
+
+// Add a comment to the comments list
+function addComment(comment) {
+  const commentsList = document.getElementById("comments-list");
+  
+  const newComment = document.createElement("li");  //
+  newComment.innerHTML = comment;
+
+  commentsList.appendChild(newComment);
+  document.getElementById("comment-text").value = "";
+
+}

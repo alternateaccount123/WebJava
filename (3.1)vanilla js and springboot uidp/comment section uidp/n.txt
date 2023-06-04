@@ -1,0 +1,19 @@
+
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
+
+
+/*
+the purpose of using then is we can figure out exactly in which block of code we got the error
+If an error occurs at any step of the Promise chain, the execution jumps directly to the catch block, bypassing the subsequent then blocks.
+workflow: the then blocks are chained together. each returned value is used by the subsequent then block 
+i.e. the fetch(url) function will return a value , then this value will become the aregument 'response'
+*/

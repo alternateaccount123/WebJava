@@ -1,0 +1,11 @@
+
+//inject service 
+@Autowired 
+
+
+//handle endpoint request 
+@getMapping("<endpoint>")
+
+
+//handle form request 
+@PostMapping("")

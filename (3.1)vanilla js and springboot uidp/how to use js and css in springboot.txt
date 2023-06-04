@@ -1,0 +1,7 @@
+it is simple just remember : 
+
+
+'template' folder has the html files
+
+'static' folder contains the javascript files or css 
+

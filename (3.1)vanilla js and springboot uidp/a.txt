@@ -1,0 +1,7 @@
+
+
+only files .
+
+note: when you use js in frontend and springboot in backend you will not use a tamplate engine. 
+you will most of the time use a restful connections. in a restcontroller you donot need map the first html to anything.
+by default it just ..idk 

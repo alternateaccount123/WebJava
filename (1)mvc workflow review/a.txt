@@ -1,4 +1,5 @@
-
+what is this directory ? 
+this progressively shows an example of how the workflow for using database and html goes. (how the classes communicate with each other)
 
 //mainpage and application.properties are located inside src/main/resources 
 

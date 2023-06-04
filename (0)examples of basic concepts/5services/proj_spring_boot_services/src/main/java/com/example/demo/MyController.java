@@ -17,8 +17,8 @@ public class MyController {
 		this.personService = personService;
 	}
 	
-	//@Autowired // get the bean called userRepository , you could also use constructor injection , they are equivalent
-	//private PersonRepository personRepository;  
+	//@Autowired // get the bean called personService , you could also use constructor injection , they are equivalent
+	//private PersonService personService;  
 
 	
 	//input personService.findById(1L)

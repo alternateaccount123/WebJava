@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Comment Section</title>
+</head>
+<body>
+
+
+	<div th:id="comments-container">
+	
+	    <form th:id="add-comment-form" th:action="@{/addComment}" th:object="${newComment}" method="post">
+	            <textarea th:field="*{message}"></textarea>
+	            <button type="submit">Submit</button>
+	    </form>
+	    
+		<ul th:id = "comments-list">
+		    <li th:each="comment : ${comments}">
+		        <span th:text="${comment.message}"></span>
+		    </li>
+	    </ul>
+	    
+    </div>
+
+    
+</body>
+</html>

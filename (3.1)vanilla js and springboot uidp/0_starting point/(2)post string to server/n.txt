@@ -1,0 +1,8 @@
+
+
+//second argument of fetch 
+{
+method: "POST",
+headers: {"Content-Type": "application/json"},
+body: JSON.stringfy({message: data}
+}

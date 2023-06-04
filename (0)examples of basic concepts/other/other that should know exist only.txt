@@ -1,0 +1,25 @@
+
+
+
+
+
+Security: Spring Security is a popular module for implementing security
+ in Spring Boot applications. It provides authentication, authorization,
+ and other security features to secure your application endpoints.
+
+Validation: Spring Boot includes validation support through the Java Bean Validation API.
+ You can use annotations such as @NotNull, @Size, and @Valid to enforce validation
+ rules on request payloads and entity fields.
+
+Configuration: Spring Boot provides various ways to configure your
+ application, including application.properties or application.yml
+ files, as well as external configuration sources. Knowing how to 
+configure properties, profiles, and custom configuration classes is important.
+
+
+
+
+loging 
+testing 
+error handling 
+

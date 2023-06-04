@@ -1,0 +1,11 @@
+what is this? 
+this folder shows the most commom concepts used in spring.
+
+
+controller :
+thymeleaf template engine:
+database repository: 
+rest controller: 
+microservices:
+DTO: (note dont use this unless you want to, you just need to know it exists)
+ 
